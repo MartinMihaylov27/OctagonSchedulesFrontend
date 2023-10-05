@@ -43,20 +43,22 @@ const LoginForm = () => {
   }
 
   return(
-    <div className="loginBox">
-        <form>
-          <h1>Login</h1>
-          <input className="textInput" onChange={handleInputChange} type="text" name="username" placeholder="Enter your username."></input>
-          <input className="textInput" onChange={handleInputChange} id="password" type="password" name="password" placeholder="Enter your password."></input><br/>
-          <input type="checkbox" onClick={togglePassword} id="showPassword" name="showPassword" value="hidden" />
-          <label htmlFor="showPassword"> Show Password</label><br/>
-          {errorMessage != null 
-            ? <p className={"red"} id="LoginErrorMessage">{errorMessage}</p>
-            : <br></br>
-          }
-          <input onClick={submitLogin} className="SubmitButton" type="submit" name="Login" value="Log In" />
-          <a href="/Register">Don't have an account?</a>
-        </form>
+    <div id="Page">\
+      <div className="loginBox">
+          <form>
+            <h1>Login</h1>
+            <input className="textInput" onChange={handleInputChange} type="text" name="username" placeholder="Enter your username."></input>
+            <input className="textInput" onChange={handleInputChange} id="password" type="password" name="password" placeholder="Enter your password."></input><br/>
+            <input type="checkbox" onClick={togglePassword} id="showPassword" name="showPassword" value="hidden" />
+            <label htmlFor="showPassword"> Show Password</label><br/>
+            {errorMessage != null 
+              ? <p className={"red"} id="LoginErrorMessage">{errorMessage}</p>
+              : <br></br>
+            }
+            <input onClick={submitLogin} className="SubmitButton" type="submit" name="Login" value="Log In" />
+            <a href="/Register">Don't have an account?</a>
+          </form>
+      </div>
     </div>
   )
 }

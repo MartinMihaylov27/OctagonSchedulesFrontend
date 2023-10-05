@@ -63,7 +63,8 @@ const RegisterForm = () => {
   }
   
   return(
-    <div className="registerBox">
+    <div id="Page">
+      <div className="registerBox">
         <form>
           <h1>Register</h1>
           <input className="textInput" onChange={handleInputChange} autoComplete="Username" type="text" name="username" placeholder="Enter your username."></input>
@@ -76,6 +77,7 @@ const RegisterForm = () => {
           <input onClick={submitRegistration} className="SubmitButton" type="submit" name="Register" value="Register" />
           <a href="/Login">Already have an account?</a>
         </form>
+      </div>
     </div>
   )
 }
